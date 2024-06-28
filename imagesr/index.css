@@ -1,0 +1,300 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3),
+            rgba(12, 3, 51, 0.3));
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    /* Remove default margin */
+    overflow-y: scroll;
+    /* Always show vertical scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page section styling */
+.page {
+    height: 100vh;
+    /* Full viewport height */
+    background-color: transparent;
+    /* Example background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0%;
+}
+
+/*.page .hed {
+    margin-bottom: 20px;
+    color: steelblue;
+    font-size: 2em; /* Example font size *
+  }*/
+
+.page p {
+    font-size: 1.1em;
+    /* Example font size */
+    line-height: 1;
+    max-width: 800px;
+    /* Example maximum width */
+    font-family: "Times New Roman", Times, serif;
+}
+
+.back {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    size-adjust: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back {
+        width: auto;
+        height: 100%;
+    }
+}
+
+a {
+    color: white;
+}
+
+/*nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.6);
+    border: solid whitesmoke 2px;
+    border-radius: 90px;
+  }*/
+nav ul li a:hover {
+    color: #fff;
+    /* White text color */
+    border: 2px solid #fff;
+    /* White border */
+    border-radius: 5px;
+    /* Subtle border-radius */
+    padding: 8px 16px;
+    /* Padding for better click area */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+header {
+    background-color: #0007;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img {
+    width: 200px;
+    height: 100px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.page .hed {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 5vw;
+    /* 5% of viewport width */
+    font-weight: bolder;
+    font-family: "Times New Roman", Times, serif;
+    transition: 0.7s;
+}
+
+main h1:hover {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+/*==================================PROJECT SECTION===============================================================*/
+.projects {
+    padding: 80px 20px;
+    background-color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(images/back1.jpeg);
+    margin-top: 1px;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.project-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    /* 3 columns on large screens */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #4caf50;
+    padding: 5px 10px;
+    border: 1px solid #4caf50;
+    border-radius: 3px;
+}
+
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(100% - 20px);
+        /* 1 column on small screens */
+    }
+}
+
+/*========================FOOTER=======================================================================*/
+footer {
+    background-color: #0007;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/*===============================WHY CHOOSE US SECTION=====================================================*/
+.why-choose-us {
+    padding: 80px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), #add8e6);
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 40px;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.why-choose-us li {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.why-choose-us li i {
+    margin-right: 10px;
+    color: #4caf50;
+}
+
+/*============================================CONTACT SECTION===================================================*/
+.contact-us {
+    padding: 80px 0;
+    color: antiquewhite;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)),
+        url(images/back1.jpeg);
+}
+
+.contact-us p {
+    margin-bottom: 40px;
+}
+
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-us li {
+    margin-bottom: 15px;
+}
+
+.contact-us li i {
+    margin-right: 10px;
+    color: #4caf50;
+}
+
+.contact-us img {
+    width: 70px;
+    height: 70px;
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 3rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
